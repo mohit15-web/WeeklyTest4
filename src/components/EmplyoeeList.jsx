@@ -3,7 +3,7 @@ import { EmployeeContext } from "../context/Context";
 
 function EmplyoeeList() {
     const {state, dispatch } = useContext(EmployeeContext);
-
+  console.log(state.emplyoye);
     const handleAdd = (employee) => {
       dispatch({
         type: "ADD_EMPLOYEE",
@@ -16,7 +16,7 @@ function EmplyoeeList() {
         <h2 className="text-2xl font-bold mb-4">All Employees</h2>
         {state.emplyoye.map(emp => (
           <div key={emp.id} className={`flex justify-between items-center p-2 bg-white mb-2 rounded
-          ${emp.bgColor === true ? "bg-gray-200" : "bg-white"}
+          ${emp.bgColor ? "bg-gray-300" : "bg-white"}
           `}>
             <div>
               <h3 className="text-xl">{emp.first_name}</h3>
