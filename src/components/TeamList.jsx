@@ -11,6 +11,7 @@ function TeamList() {
       });
     };
   
+  
     const handleSort = () => {
       dispatch({
         type: "SORT_TEAM"
